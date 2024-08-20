@@ -20,6 +20,10 @@ function Auth() {
 
   const navigate = useNavigate("");
 
+  const adminLogin = () =>{
+    navigate("/admin-login")
+  }
+
 //Register handling function
   const handleRgister = async () => {
     const { username, password, email } = data;
@@ -142,7 +146,7 @@ function Auth() {
             </div>
           </Col>
         </Row>
-        <Row><a className="text-center text-danger" href="/admin-login">Admin Login</a></Row>
+        <Row><button className="text-center btn btn-link text-danger" onClick={adminLogin}>Admin Login</button></Row>
         
         </div>
       </div>
